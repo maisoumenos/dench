@@ -7,11 +7,11 @@ export const PageLinks = () => (
     <style jsx>{`
       .page-links > a {
         transition: box-shadow 200ms ease-in-out;
-        box-shadow: inset 0 -0.4em rgba(0, 0, 0, 0.15);
+        box-shadow: inset 0 -0.4em rgba(0, 0, 0, 0.25);
       }
 
       .page-links > a:hover {
-        box-shadow: inset 0 -0.6em rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 -0.6em rgba(0, 0, 0, 0.35);
       }
     `}</style>
   </Bar>

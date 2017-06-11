@@ -61,6 +61,15 @@ export const BreakdownStatus = ({ first, last}) => {
             text-align: right;
           }
         }
+
+        @media (min-width: 1200px) {
+          .current__start,
+          .current__current {
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+          }
+        }
       `}</style>
     </div>
   )
