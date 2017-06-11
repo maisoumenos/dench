@@ -47,6 +47,13 @@ export const BreakdownChange = ({ first, last}) => {
         .is-positive {
           color: #46CE6B;
         }
+
+        @media (min-width: 1200px) {
+          .change {
+            font-size: 14px;
+            letter-spacing: 3px;
+          }
+        }
       `}</style>
     </div>
   )
