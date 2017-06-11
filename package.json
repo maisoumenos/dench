@@ -1,6 +1,7 @@
 {
   "name": "dench",
   "version": "0.1.0",
+  "description": "A simple breakdown for workout data from Stronglifts 5x5.",
   "scripts": {
     "dev": "next",
     "build": "next build",
