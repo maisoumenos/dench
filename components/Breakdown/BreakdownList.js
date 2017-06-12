@@ -8,23 +8,23 @@ export const BreakdownList = ({ items }) => {
       </li>
 
       <li className='breakdown-list__item'>
-        <BreakdownItem name="Squat" results={items.Squat} />
+        <BreakdownItem name="Squat" results={items.squat} />
       </li>
 
       <li className='breakdown-list__item'>
-        <BreakdownItem name="Overhead Press" results={items["Overhead Press"]} />
+        <BreakdownItem name="Overhead Press" results={items["overhead press"]} />
       </li>
 
       <li className='breakdown-list__item'>
-        <BreakdownItem name="Bench Press" results={items["Bench Press"]} />
+        <BreakdownItem name="Bench Press" results={items["bench press"]} />
       </li>
 
       <li className='breakdown-list__item'>
-        <BreakdownItem name="Deadlift" results={items.Deadlift} />
+        <BreakdownItem name="Deadlift" results={items.deadlift} />
       </li>
 
       <li className='breakdown-list__item'>
-        <BreakdownItem name="Barbell Row" results={items["Barbell Row"]} />
+        <BreakdownItem name="Barbell Row" results={items["barbell row"]} />
       </li>
 
       <style jsx>{`
