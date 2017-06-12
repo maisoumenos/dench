@@ -6,7 +6,7 @@ import { AreaClosed, LinePath } from '@vx/shape';
 import { PatternLines } from '@vx/pattern';
 import { extent, min, max } from 'd3-array';
 
-const xAccessor = d => new Date(d.date);
+const xAccessor = d => new Date(d.completedOn);
 const yAccessor = d => d.kilos;
 
 export const BreakdownGraph = ({ name, width, height, data }) => {
@@ -42,14 +42,6 @@ export const BreakdownGraph = ({ name, width, height, data }) => {
         />
 
         {data.map((d, i) => {
-          let hadFailure = false;
-
-          if (d.sets && name === 'Deadlift') {
-            hadFailure = d.sets[0] < 5
-          } else if (d.sets) {
-            hadFailure = d.sets.filter(r => r < 5).length;
-          }
-
           return (
             <Group key={`${data.name}_${i}`}>
               <GlyphDot
@@ -63,7 +55,7 @@ export const BreakdownGraph = ({ name, width, height, data }) => {
                 cx={xScale(xAccessor(d))}
                 cy={yScale(yAccessor(d))}
                 r={2}
-                fill={hadFailure ? '#f93838' : 'rgba(255, 255, 255, 0.5)'}
+                fill={d.hasFailure ? '#f93838' : 'rgba(255, 255, 255, 0.5)'}
               />
             </Group>
           )

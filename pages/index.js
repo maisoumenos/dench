@@ -1,9 +1,9 @@
-import parseStrongliftsData from '../utils/parseStrongliftsData';
+import getData from '../utils/getData';
 import data from '../data/spreadsheet.stronglifts.csv';
 
 import { Bar, Footer, Head, Intro, Page, BreakdownList, ShortDate } from '../components';
 
-export const Index = ({ startedOn, lastUpdated, totalWorkouts, days, breakdown }) => (
+export const Index = ({ startedOn, lastUpdated, totalWorkouts, exercises }) => (
   <Page>
     <Head />
 
@@ -20,7 +20,7 @@ export const Index = ({ startedOn, lastUpdated, totalWorkouts, days, breakdown }
     </Page.Section>
 
     <BreakdownList
-      items={breakdown}
+      items={exercises}
     />
 
     <Page.Section>
@@ -35,13 +35,13 @@ export const Index = ({ startedOn, lastUpdated, totalWorkouts, days, breakdown }
 )
 
 Index.getInitialProps = async () => {
-  const { breakdown, lastUpdated, days, startedOn, totalWorkouts } = parseStrongliftsData(data);
+  const { groupedByExercises, meta } = getData(data);
+
   return {
-    startedOn,
-    lastUpdated,
-    totalWorkouts,
-    days,
-    breakdown,
+    exercises: groupedByExercises,
+    startedOn: meta.startedOn,
+    lastUpdated: meta.lastUpdated,
+    totalWorkouts: meta.totalWorkouts,
   }
 }
 
