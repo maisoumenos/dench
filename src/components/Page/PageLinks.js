@@ -1,8 +1,10 @@
-import { Bar } from '../';
+import { Bar } from "..";
 
 export const PageLinks = () => (
   <Bar>
-    <p className='page-links'>View on <a href="https://github.com/maisoumenos/dench">Github</a></p>
+    <p className="page-links">
+      View on <a href="https://github.com/maisoumenos/dench">Github</a>
+    </p>
 
     <style jsx>{`
       .page-links > a {
@@ -15,6 +17,6 @@ export const PageLinks = () => (
       }
     `}</style>
   </Bar>
-)
+);
 
 export default PageLinks;

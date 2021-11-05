@@ -1,14 +1,13 @@
-import { compose } from 'ramda';
-import { SVGIcon } from '../';
-import {formatShortDate} from '../../utils/dates';
+import { SVGIcon } from "..";
+import { formatShortDate } from "../../utils/dates";
 
-export const Intro = ({ startedOn, lastUpdated, total}) => (
-  <div className='intro'>
+export const Intro = ({ startedOn, lastUpdated, total }) => (
+  <div className="intro">
     <SVGIcon>
       <SVGIcon.Dench height={92} width={157} />
     </SVGIcon>
 
-    <p className='intro__last-updated'>
+    <p className="intro__last-updated">
       Last workout on {formatShortDate(lastUpdated)}
     </p>
 
@@ -33,6 +32,6 @@ export const Intro = ({ startedOn, lastUpdated, total}) => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Intro
+export default Intro;

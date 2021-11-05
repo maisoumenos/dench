@@ -1,14 +1,21 @@
-import { SVGIcon, ShortDate } from '../'
+import { SVGIcon, ShortDate } from "..";
 
 export const Footer = ({ startedOn, total }) => (
-  <footer className='footer'>
+  <footer className="footer">
     <div className="footer__text">
-      <p>A simple breakdown of {total} workouts since <ShortDate date={startedOn} /> using data from <a href="https://stronglifts.com/5x5/" target="_blank">Stronglifts 5x5</a>.</p>
+      <p>
+        A simple breakdown of {total} workouts since{" "}
+        <ShortDate date={startedOn} /> using data from{" "}
+        <a href="https://stronglifts.com/5x5/" target="_blank">
+          Stronglifts 5x5
+        </a>
+        .
+      </p>
     </div>
 
     <a href="http://maisoumenos.co" className="footer__logo">
       <SVGIcon>
-        <SVGIcon.Mais height={174/1.25} width={176/1.25} />
+        <SVGIcon.Mais height={174 / 1.25} width={176 / 1.25} />
       </SVGIcon>
     </a>
 
@@ -47,10 +54,10 @@ export const Footer = ({ startedOn, total }) => (
       }
 
       .footer__logo:hover {
-        opacity: .2;
+        opacity: 0.2;
       }
     `}</style>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;
