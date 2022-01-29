@@ -1,8 +1,8 @@
-import { SVGIcon } from '../';
+import { SVGIcon } from "..";
 
-export const BreakdownStatus = ({ first, last}) => {
+export const BreakdownStatus = ({ first, last }) => {
   return (
-    <div className='current'>
+    <div className="current">
       <div className="current__start">{first}kg</div>
       <SVGIcon>
         <SVGIcon.KeyRight height={36} width={36} />
@@ -11,9 +11,9 @@ export const BreakdownStatus = ({ first, last}) => {
 
       <style jsx>{`
         .current {
-           display: flex;
-           align-items: center;
-           justify-content: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .current__start,
@@ -43,7 +43,7 @@ export const BreakdownStatus = ({ first, last}) => {
 
         @media (max-width: 650px) {
           .current {
-             justify-content: flex-start;
+            justify-content: flex-start;
           }
 
           .current__start,
@@ -72,7 +72,7 @@ export const BreakdownStatus = ({ first, last}) => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default BreakdownStatus
+export default BreakdownStatus;

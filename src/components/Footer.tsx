@@ -1,15 +1,27 @@
-import { SVGIcon, ShortDate } from '../'
+import { FC } from "react";
+import { formatShortDate } from "../utils/dates";
+import { MaisOuMenos } from "./Logos";
 
-export const Footer = ({ startedOn, total }) => (
-  <footer className='footer'>
+interface FooterProps {
+  startedOn: string | Date;
+  total: number;
+}
+
+export const Footer: FC<FooterProps> = ({ startedOn, total }) => (
+  <footer className="footer">
     <div className="footer__text">
-      <p>A simple breakdown of {total} workouts since <ShortDate date={startedOn} /> using data from <a href="https://stronglifts.com/5x5/" target="_blank">Stronglifts 5x5</a>.</p>
+      <p>
+        A simple breakdown of {total} workouts since{" "}
+        {formatShortDate(startedOn)} using data from{" "}
+        <a href="https://stronglifts.com/5x5/" target="_blank">
+          Stronglifts 5x5
+        </a>
+        .
+      </p>
     </div>
 
     <a href="http://maisoumenos.co" className="footer__logo">
-      <SVGIcon>
-        <SVGIcon.Mais height={174/1.25} width={176/1.25} />
-      </SVGIcon>
+      <MaisOuMenos height={174 / 1.25} width={176 / 1.25} />
     </a>
 
     <style jsx>{`
@@ -18,6 +30,7 @@ export const Footer = ({ startedOn, total }) => (
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        padding: 8rem 24px;
       }
 
       .footer__text {
@@ -47,10 +60,8 @@ export const Footer = ({ startedOn, total }) => (
       }
 
       .footer__logo:hover {
-        opacity: .2;
+        opacity: 0.2;
       }
     `}</style>
   </footer>
-)
-
-export default Footer
+);
